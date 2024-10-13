@@ -1,70 +1,89 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# BookCRUD-APP
 
-## Available Scripts
+A comprehensive Book CRUD (Create, Read, Update, Delete) application using ReactJS for the front-end and ASP.NET Core Web API for the back-end. The project allows authenticated users to perform CRUD operations on a book collection, while unauthenticated or non-admin users can only view the list of books.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **User Authentication**: Login functionality for different user roles.
+- **Role-based Access Control**:
+  - Admin users can add, edit, delete, and view books.
+  - Normal users can only view books.
+- **Custom User Model**: Integrated with ASP.NET Core for user management and authentication.
+- **Book Management**:
+  - Add new books with details such as name, author, ISBN, and year of publication.
+  - Edit and update book details.
+  - Delete books.
+  - View a list of all books.
+- **Responsive Front-End**: Developed using ReactJS with a modern, professional UI built with Syncfusion.
+- **API-based Architecture**: ASP.NET Core Web API for handling backend operations.
+- **SQL Server Database**: Hosted in Azure for storing book data and user authentication details.
+- **Encrypted Connection String**: Security applied for sensitive data.
+- **Action-Based Login Prompt**: Login prompts appear when attempting restricted actions like add, edit, or delete.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Prerequisites
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **.NET Core 8.0 SDK** or later
+- **Node.js** (LTS version)
+- **SQL Server** (Azure or local)
+- **Visual Studio 2022** (or any preferred IDE)
+- **ReactJS** (v18 or later)
+- **Syncfusion** (for UI components)
 
-### `npm test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### Front-End Setup (ReactJS)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Navigate to the front-end directory**:
+   ```bash
+   cd BookCURD-APP/
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. **Run the React application**:
+   ```bash
+   npm start
+   ```
 
-### `npm run eject`
+The front-end will run at `http://localhost:3000/`.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## API Endpoints
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+| HTTP Method | Endpoint            | Description                         |
+|-------------|---------------------|-------------------------------------|
+| GET         | `/api/books`         | List all books                     |
+| POST        | `/api/books`         | Add a new book (Admin only)         |
+| PUT         | `/api/books/{id}`    | Update book details (Admin only)    |
+| DELETE      | `/api/books/{id}`    | Delete a book (Admin only)          |
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Role-Based Access Control
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **Admin**: Full CRUD access.
+- **User**: View-only access.
+- **Anonymous**: View-only access.
 
-## Learn More
+## Technology Stack
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Frontend**: ReactJS, Syncfusion for UI components
+- **Backend**: ASP.NET Core 8.0
+- **Database**: SQL Server (Azure)
+- **Authentication**: Custom user model with role-based access
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Future Enhancements
 
-### Code Splitting
+- Integration with JWT for improved security.
+- Additional role management and user permissions.
+- Enhanced UI features using Syncfusion grids.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## License
 
-### Analyzing the Bundle Size
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Contributing
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Contributions are welcome! Please submit a pull request or open an issue for discussion.
