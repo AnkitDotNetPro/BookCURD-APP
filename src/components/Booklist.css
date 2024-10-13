@@ -1,0 +1,41 @@
+.grid-container {
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 1200px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .e-grid .e-headercell {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .e-grid .e-row {
+    background-color: #f9f9f9;
+  }
+  
+  .e-grid .e-row:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .e-grid .e-rowcell {
+    padding: 15px;
+  }
+  
+  .e-grid .e-headercell {
+    padding: 10px;
+  }
+  
+  .e-grid .e-toolbar {
+    background-color: #f4f4f9;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .e-grid .e-toolbar .e-toolbar-item:hover {
+    background-color: #007bff;
+    color: white;
+  }
+  
